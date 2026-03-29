@@ -20,6 +20,7 @@ Python ofrece una robusta "Standard Library". Para los proyectos de clase, las m
 Ejemplo de implementación (Gráfico de Líneas):
 
 Python
+```
 import flet as ft
 import matplotlib.pyplot as plt
 import numpy as np
@@ -38,6 +39,8 @@ def main(page: ft.Page):
     page.add(chart)
 
 ft.app(target=main)
+```
+
 🛠️ 2.3 Creación de Componentes Definidos por el Usuario
 Los componentes se dividen en dos categorías según su interacción con el usuario:
 
@@ -48,6 +51,7 @@ No Visuales: Clases lógicas que gestionan datos, conexiones a BD o cálculos, s
 Código de ejemplo (Componente Visual "Tarjeta de Usuario"):
 
 Python
+```
 import flet as ft
 
 class UserCard(ft.Container):
@@ -61,12 +65,14 @@ class UserCard(ft.Container):
         self.padding = 10
         self.border = ft.border.all(1, ft.colors.BLUE_200)
         self.border_radius = 10
+```
+
 📦 2.4 Creación y Uso de Paquetes Definidos por el Usuario
 Para organizar un proyecto de TAP, se estructuran las funcionalidades en carpetas locales que luego se importan como librerías propias.
 
 Estructura del Repositorio:
 
-Plaintext
+```
 PROYECTO_FINAL/
 │
 ├── main.py                # Punto de entrada
@@ -76,13 +82,18 @@ PROYECTO_FINAL/
 └── logic_tools/           # PAQUETE NO VISUAL
     ├── __init__.py
     └── calculator.py
+```
+
 Uso en main.py:
 
 Python
+```
 from app_gui.layouts import main_screen
 from logic_tools.calculator import process_data
 
 # Aquí se ensambla la lógica con la interfaz
+```
+
 📚 Bibliografía (Formato APA)
 Flet Dev. (2026). Matplotlib Chart Control. Recuperado de https://flet.dev/docs/controls/matplotlibchart/
 
